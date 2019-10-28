@@ -1,7 +1,6 @@
 {
   "name": "matscv",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
@@ -9,7 +8,12 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "express-pino-logger": "^4.0.0",
+    "node-env-run": "^3.0.2",
+    "nodemon": "^1.19.4",
+    "npm-run-all": "^4.1.5",
+    "pino-colada": "^1.4.5"
   },
   "scripts": {
     "serve": "react-scripts start",
@@ -35,11 +39,16 @@
     ]
   },
   "proxy": "http://localhost:5000",
-  "devDependencies": {
-    "express-pino-logger": "^4.0.0",
-    "node-env-run": "^3.0.2",
-    "nodemon": "^1.19.4",
-    "npm-run-all": "^4.1.5",
-    "pino-colada": "^1.4.5"
+  "keywords": [
+    "react",
+    "heroku"
+  ],
+  "author": {
+    "email": "mats.lindblad@gmail.com",
+    "name": "Mats Lindblad",
+    "url": "https://mats-lindblad.se/"
+  },
+  "engines": {
+    "node": "12.10.0"
   }
 }
