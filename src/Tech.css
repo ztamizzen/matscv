@@ -1,0 +1,16 @@
+.tech {
+  display: grid;
+  grid-template-columns: [start] auto [middle] 1fr [end];
+  margin: auto;
+  max-width: 80vw;
+  text-align: left;
+}
+
+.tech dt {
+  font-weight: 700;
+  grid-column: start / middle;
+}
+
+.tech dd {
+  grid-column: middle / end;
+}

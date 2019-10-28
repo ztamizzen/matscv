@@ -3,20 +3,56 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .App-link {
   color: #09d3ac;
+}
+
+.explanation-section {
+  margin: auto;
+  max-width: 80vw;
+  width: 100%;
+}
+
+code {
+  background: #ddd;
+  padding: .1rem .3rem;
+}
+
+.App-header nav,
+.App-header ul {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
+
+.App-header li {
+  list-style: none;
+}
+
+.App-header li::marker {
+  display: none;
+}
+
+.App-header a {
+  background: white;
+  border-radius: .2rem;
+  color: #282c34;
+  padding: .1rem .3rem;
+  text-decoration: none;
 }
