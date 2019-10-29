@@ -14,7 +14,7 @@ app.get("/api/hello", (req, res) => {
     }));
 });
 
-app.get("/api/friends", (req, res) => {
+app.get("/api/friends", (_, res) => {
     const friendsList = [
         { id: 1, name: 'Phoebe' },
         { id: 2, name: 'Rachel' },

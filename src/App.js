@@ -3,10 +3,14 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  NavLink
 } from 'react-router-dom';
 import axios from 'axios';
 import Tech from './Tech';
+import Contracts from './Contracts';
+import Work from './Work';
+import About from './About';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import logo from './logo.svg';
 import './App.css';
 
@@ -44,56 +48,64 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <NavLink exact to="/">Home</NavLink>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <NavLink to="/about">About</NavLink>
               </li>
               <li>
-                <Link to="/contracts">Contracts</Link>
+                <NavLink to="/contracts">Contracts</NavLink>
               </li>
               <li>
-                <Link to="/work">Work</Link>
+                <NavLink to="/work">Work</NavLink>
               </li>
               <li>
-                <Link to="/tech">Tech</Link>
+                <NavLink to="/tech">Tech</NavLink>
               </li>
             </ul>
           </nav>
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <main>
-          <Switch>
-            <Route path="/about">
-              <h1>About me</h1>
-            </Route>
-            <Route path="/contracts">
-              <h1>Contracts / Assignments</h1>
-            </Route>
-            <Route path="/work">
-              <h1>Work / Jobs I've had</h1>
-            </Route>
-            <Route path="/tech">
-              <Tech />
-            </Route>
-            <Route path="/">
-              <h1>{greeting}</h1>
-              <button onClick={() => setName('Nisse')}>Nisse</button>
-              <button onClick={() => setName('Pelle')}>Pelle</button>
-              <button onClick={() => setName('Kalle')}>Kalle</button>
-              <select value={name} onChange={e => setName(e.target.value)}>
-                {friends && friends.map(friend => (
-                  <option key={friend.id} value={friend.name}>
-                    {friend.name}
-                  </option>
-                ))}
-              </select>
-              <section className="explanation-section">
-                <h2>Testing and learning React Hooks</h2>
-                <p>Making use of a custom hook called <code>useNameGreeting</code>, <code>useEffect</code>, <code>useState</code> and axios.</p>
-              </section>
-            </Route>
-          </Switch>
+        <main className="App-main">
+          <TransitionGroup>
+            <CSSTransition
+              key={true}
+              classNames="fade"
+              timeout={300}
+            >
+              <Switch>
+                <Route path="/about">
+                  <About />
+                </Route>
+                <Route path="/contracts">
+                  <Contracts />
+                </Route>
+                <Route path="/work">
+                  <Work />
+                </Route>
+                <Route path="/tech">
+                  <Tech />
+                </Route>
+                <Route path="/">
+                  <h1>{greeting}</h1>
+                  <button onClick={() => setName('Nisse')}>Nisse</button>
+                  <button onClick={() => setName('Pelle')}>Pelle</button>
+                  <button onClick={() => setName('Kalle')}>Kalle</button>
+                  <select value={name} onChange={e => setName(e.target.value)}>
+                    {friends && friends.map(friend => (
+                      <option key={friend.id} value={friend.name}>
+                        {friend.name}
+                      </option>
+                    ))}
+                  </select>
+                  <section className="explanation-section">
+                    <h2>Testing and learning React Hooks</h2>
+                    <p>Making use of a custom hook called <code>useNameGreeting</code>, <code>useEffect</code>, <code>useState</code> and axios.</p>
+                  </section>
+                </Route>
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
         </main>
       </div>
     </Router>

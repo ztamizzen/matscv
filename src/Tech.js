@@ -10,7 +10,7 @@ export default function Tech() {
                 <dt>Vue</dt>
                 <dd>Full on during 2018 and 2019</dd>
                 <dt>Rust</dt>
-                <dd>On and off since 2016</dd>
+                <dd>On and off since 2016. <q cite="https://open.spotify.com/track/0yjhcB1fBuZ9SN7nn4mVB2?si=jZ7OXXq8S0W-mk-ZuQ5MQg">It's better to burn out, 'cause Rust never sleeps.</q></dd>
                 <dt>Vuex</dt>
                 <dd>Mostly on my own, since 2018</dd>
                 <dt>Redux</dt>
@@ -29,11 +29,12 @@ export default function Tech() {
                 <dd>Since 2005, includes RubyOnRails</dd>
             </dl>
             <h2>Things any front end developer should know</h2>
+            <h3>I obviously do. Anything else would be embarrasing.</h3>
             <dl className="tech">
                 <dt>JavaScript</dt>
-                <dd>Since 1998</dd>
+                <dd>Since 1998. Yes, I'm that old.</dd>
                 <dt>HTML5</dt>
-                <dd>Since 2014</dd>
+                <dd>Since 2014. 28th Oct 2014 to be exact. <a href="https://sv.wikipedia.org/wiki/HTML5">Wikipedia</a>. It also has the best logo of all the specs, by far.</dd>
                 <dt>CSS</dt>
                 <dd>Since browsers first implemented it</dd>
                 <dt>DOM</dt>

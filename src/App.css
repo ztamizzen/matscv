@@ -16,6 +16,13 @@
   color: white;
 }
 
+.App-main {
+  margin: auto;
+  max-width: 80vw;
+  text-align: left;
+  width: 100%;
+}
+
 .App-link {
   color: #09d3ac;
 }
@@ -50,9 +57,16 @@ code {
 }
 
 .App-header a {
-  background: white;
-  border-radius: .2rem;
-  color: #282c34;
-  padding: .1rem .3rem;
+  background: linear-gradient(to top, white, black 10%);
+  color: whitesmoke;
+  padding: .1rem .5rem .2rem;
   text-decoration: none;
+  text-shadow: 0 0 .2rem black;
+  transition: background .3s ease, color .3s ease, padding .3s ease;
+}
+
+.App-header .active {
+  background: linear-gradient(to bottom, whitesmoke, black 10%);
+  color: white;
+  padding: .1rem .5rem .5rem;
 }
