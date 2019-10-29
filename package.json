@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node-env-run server --exec nodemon | pino-colada",
-    "serve": "run-p server serve",
+    "serve": "run-p server start",
     "heroku-postbuild": "npm run-script server"
   },
   "eslintConfig": {
