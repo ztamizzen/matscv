@@ -18,3 +18,11 @@ export const mutations = {
         state.todos = [...state.todos.slice(0, indexOfTodo), ...state.todos.slice(indexOfTodo + 1)];
     }
 };
+
+/* "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+} */
